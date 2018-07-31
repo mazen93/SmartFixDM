@@ -10,6 +10,7 @@
 		046AFEF121086C18008A417A /* OrderTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046AFEF021086C18008A417A /* OrderTypeModel.swift */; };
 		046AFEF3210890E7008A417A /* OrderPartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046AFEF2210890E7008A417A /* OrderPartsModel.swift */; };
 		04936FE0210C6206006E8534 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04936FDF210C6206006E8534 /* CoreLocation.framework */; };
+		04956A4B21108F78001585FD /* orderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04956A4A21108F78001585FD /* orderCell.swift */; };
 		049F2396210F5C960022DC17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2395210F5C960022DC17 /* ViewController.swift */; };
 		04D8316720FF309F00048866 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8316620FF309F00048866 /* StoreCell.swift */; };
 		04D8317120FF36E900048866 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8317020FF36E900048866 /* StoreModel.swift */; };
@@ -32,7 +33,6 @@
 		312D467620FE13A9002ED342 /* orderCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D467520FE13A9002ED342 /* orderCelll.swift */; };
 		312D467820FE173E002ED342 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D467720FE173E002ED342 /* OrderDetails.swift */; };
 		312D467A20FE1AB8002ED342 /* cornercellimg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312D467920FE1AB8002ED342 /* cornercellimg.swift */; };
-		31AF07462107353200B65760 /* DRoB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AF07452107353200B65760 /* DRoB.swift */; };
 		834B70BD9A8AF78001640F73 /* Pods_SmartFix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C147AF6E89B8719EDFE66E9A /* Pods_SmartFix.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		046AFEF021086C18008A417A /* OrderTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTypeModel.swift; sourceTree = "<group>"; };
 		046AFEF2210890E7008A417A /* OrderPartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPartsModel.swift; sourceTree = "<group>"; };
 		04936FDF210C6206006E8534 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		04956A4A21108F78001585FD /* orderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCell.swift; sourceTree = "<group>"; };
 		049F2395210F5C960022DC17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04D8316620FF309F00048866 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		04D8317020FF36E900048866 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		312D467520FE13A9002ED342 /* orderCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCelll.swift; sourceTree = "<group>"; };
 		312D467720FE173E002ED342 /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
 		312D467920FE1AB8002ED342 /* cornercellimg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cornercellimg.swift; sourceTree = "<group>"; };
-		31AF07452107353200B65760 /* DRoB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRoB.swift; sourceTree = "<group>"; };
 		C147AF6E89B8719EDFE66E9A /* Pods_SmartFix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6914767DBE872E6048E846C /* Pods-SmartFix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFix.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFix/Pods-SmartFix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				312D467520FE13A9002ED342 /* orderCelll.swift */,
+				04956A4A21108F78001585FD /* orderCell.swift */,
 			);
 			path = OrderCells;
 			sourceTree = "<group>";
@@ -235,7 +236,6 @@
 				04D8316120FF2F3B00048866 /* View */,
 				312D466E20FDEF2A002ED342 /* Model */,
 				312D466720FDE0BF002ED342 /* Control */,
-				31AF07452107353200B65760 /* DRoB.swift */,
 			);
 			path = SmartFix;
 			sourceTree = "<group>";
@@ -401,6 +401,7 @@
 				046AFEF121086C18008A417A /* OrderTypeModel.swift in Sources */,
 				312D467A20FE1AB8002ED342 /* cornercellimg.swift in Sources */,
 				312D465820FDCF9C002ED342 /* StoreVC.swift in Sources */,
+				04956A4B21108F78001585FD /* orderCell.swift in Sources */,
 				312D465620FDCF9C002ED342 /* AppDelegate.swift in Sources */,
 				046AFEF3210890E7008A417A /* OrderPartsModel.swift in Sources */,
 				312D467220FE0102002ED342 /* TechnicalRegester.swift in Sources */,
@@ -413,7 +414,6 @@
 				312D467820FE173E002ED342 /* OrderDetails.swift in Sources */,
 				312D466920FDE0FD002ED342 /* CentersVC.swift in Sources */,
 				312D467620FE13A9002ED342 /* orderCelll.swift in Sources */,
-				31AF07462107353200B65760 /* DRoB.swift in Sources */,
 				312D467020FDEF4B002ED342 /* CenterModel.swift in Sources */,
 				049F2396210F5C960022DC17 /* ViewController.swift in Sources */,
 				312D466B20FDE138002ED342 /* Centercell.swift in Sources */,

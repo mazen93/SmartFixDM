@@ -11,13 +11,13 @@ import RealmSwift
 import Realm
 import Firebase
 import SafariServices
-class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class ReguestOrder: UIViewController ,UITableViewDelegate,UITableViewDataSource {
 
     var ref: DatabaseReference!
     var OrderList:Results<OrderModel>!
     
-    
-    @IBOutlet weak var collectioV1: UICollectionView!
+@IBOutlet weak var tableV1: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +25,8 @@ class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDa
        BackgroundProcess()
 }
     func setCollectionView(){
-        collectioV1.dataSource = self
-        collectioV1.delegate = self
+        tableV1.delegate = self
+        tableV1.dataSource = self
         self.navigationItem.title="طلب صيانة"
         self.navigationItem.backBarButtonItem=UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor=UIColor.white
@@ -90,40 +90,29 @@ class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     }
     func reloadData()  {
         OrderList=uiRealm.objects(OrderModel.self)
-        self.collectioV1.reloadData()
+        self.tableV1.reloadData()
     }
     
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        if OrderList != nil{
-            return OrderList.count
-        }else{
-            return 0
-        }
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectioV1.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath) as! orderCelll
-        
-        
-        cell.set(center: OrderList[indexPath.row] )
-        
-     
-    
-
-    return cell
-        
-        
-        
-        
-}
+   
+//
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let cell = collectioV1.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath) as! orderCelll
+//
+//
+//        cell.set(center: OrderList[indexPath.row] )
+//
+//
+//
+//
+//    return cell
+//
+//
+//
+//
+//}
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -143,6 +132,58 @@ class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     
    
 
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if OrderList != nil{
+            return OrderList.count
+        }else{
+            return 0
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") as! orderCell
+        cell.set(center: OrderList[indexPath.row] )
+       
+    
+        
+       return cell
+        
+        
+        
+        
+      
+        
+    }
+    
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // let vc = storyboard?.instantiateViewController(withIdentifier: "OrderDetails") as? OrderDetails
+        if OrderList[indexPath.row].phone == "iPhone"{
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "OrderDetails") as? OrderDetails
+            vc?.orderKey=OrderList[indexPath.row]
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }else{
+            
+            let vc=SFSafariViewController(url: URL(string: "http://www.smartfixsa.com/maintenance/")!)
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
     
     
     
