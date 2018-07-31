@@ -27,6 +27,7 @@ class CentersModel:Object {
     @objc dynamic var name:String? = nil
     @objc dynamic var addres:String? = nil
     @objc dynamic var service:String? = nil
+    @objc dynamic var photo:String? = nil
     let lat = RealmOptional<Double>()
     let lng = RealmOptional<Double>()
     

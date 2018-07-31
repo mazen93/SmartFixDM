@@ -10,6 +10,7 @@
 		046AFEF121086C18008A417A /* OrderTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046AFEF021086C18008A417A /* OrderTypeModel.swift */; };
 		046AFEF3210890E7008A417A /* OrderPartsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046AFEF2210890E7008A417A /* OrderPartsModel.swift */; };
 		04936FE0210C6206006E8534 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04936FDF210C6206006E8534 /* CoreLocation.framework */; };
+		049F2396210F5C960022DC17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F2395210F5C960022DC17 /* ViewController.swift */; };
 		04D8316720FF309F00048866 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8316620FF309F00048866 /* StoreCell.swift */; };
 		04D8317120FF36E900048866 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D8317020FF36E900048866 /* StoreModel.swift */; };
 		04D90F8C210DA6AE0035C951 /* LatLngModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D90F8B210DA6AE0035C951 /* LatLngModel.swift */; };
@@ -39,6 +40,7 @@
 		046AFEF021086C18008A417A /* OrderTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTypeModel.swift; sourceTree = "<group>"; };
 		046AFEF2210890E7008A417A /* OrderPartsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPartsModel.swift; sourceTree = "<group>"; };
 		04936FDF210C6206006E8534 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		049F2395210F5C960022DC17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04D8316620FF309F00048866 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		04D8317020FF36E900048866 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		04D90F8B210DA6AE0035C951 /* LatLngModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatLngModel.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				04D8316A20FF313500048866 /* Stores */,
 				04D8316920FF311200048866 /* Centers */,
 				312D467920FE1AB8002ED342 /* cornercellimg.swift */,
+				049F2395210F5C960022DC17 /* ViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				312D467620FE13A9002ED342 /* orderCelll.swift in Sources */,
 				31AF07462107353200B65760 /* DRoB.swift in Sources */,
 				312D467020FDEF4B002ED342 /* CenterModel.swift in Sources */,
+				049F2396210F5C960022DC17 /* ViewController.swift in Sources */,
 				312D466B20FDE138002ED342 /* Centercell.swift in Sources */,
 				04D8316720FF309F00048866 /* StoreCell.swift in Sources */,
 			);

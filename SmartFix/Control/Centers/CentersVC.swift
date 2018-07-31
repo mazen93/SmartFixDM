@@ -97,7 +97,7 @@ class CentersVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     let CenterName  = artistObject?["name"] as! String
                     let CenterAddress = artistObject?["address"] as! String
                     let CenterService  = artistObject?["the_service"] as! String
-                    
+                    let CenterImage  = artistObject?["image"] as! String
                     
                     
                     
@@ -136,7 +136,7 @@ class CentersVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
                     user.service=CenterService
                     user.lat.value=lat
                     user.lng.value=lng
-                    
+                    user.photo=CenterImage
                     user.writeToRealm()
                     
                     //appending it to list

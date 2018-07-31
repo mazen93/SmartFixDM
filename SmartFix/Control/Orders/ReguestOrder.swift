@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import Realm
 import Firebase
-
+import SafariServices
 class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     var ref: DatabaseReference!
@@ -129,11 +129,16 @@ class ReguestOrder: UIViewController,UICollectionViewDelegate,UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
        // let vc = storyboard?.instantiateViewController(withIdentifier: "OrderDetails") as? OrderDetails
-        
+        if OrderList[indexPath.row].phone == "iPhone"{
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "OrderDetails") as? OrderDetails
         vc?.orderKey=OrderList[indexPath.row]
         self.navigationController?.pushViewController(vc!, animated: true)
+        }else{
+            
+                    let vc=SFSafariViewController(url: URL(string: "http://www.smartfixsa.com/maintenance/")!)
+                    self.present(vc, animated: true, completion: nil)
+        }
     }
     
    

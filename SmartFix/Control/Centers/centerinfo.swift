@@ -69,6 +69,8 @@ class centerinfo: UIViewController {
         
         ServiceLabel.text = CentersList.service
         AddressLabel.text = CentersList.addres
+        let url = URL(string: CentersList.photo!)
+        photo.kf.setImage(with: url)
     }
 
   
