@@ -56,9 +56,9 @@ class centerinfo: UIViewController {
     func setUpView(){
         
         // GoButton.layer.cornerRadius =  GoButton.frame.size.width/2
-        GoButton.layer.cornerRadius = 20
-        GoButton.layer.borderWidth = 2
-        GoButton.layer.borderColor = UIColor.white.cgColor
+        GoButton.layer.cornerRadius = 10
+        GoButton.layer.borderWidth = 1
+        GoButton.layer.borderColor = UIColor.darkGray.cgColor
         
          self.navigationItem.title=CentersList.name
          self.navigationItem.backBarButtonItem=UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)

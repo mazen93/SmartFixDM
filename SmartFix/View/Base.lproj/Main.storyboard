@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smartfix bg" translatesAutoresizingMaskIntoConstraints="NO" id="iww-dk-gR7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Backgroundd" translatesAutoresizingMaskIntoConstraints="NO" id="iww-dk-gR7">
                                 <rect key="frame" x="0.0" y="14" width="375" height="703"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-5V-03E">
@@ -27,7 +27,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اهلا بكم في النسخه التجربيه" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJQ-iZ-ISH">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -762,7 +762,7 @@
                         <viewLayoutGuide key="safeArea" id="dHa-sH-M8Q"/>
                     </view>
                     <navigationItem key="navigationItem" title="اطلب صيانة" id="XG4-k5-RkV">
-                        <barButtonItem key="backBarButtonItem" title=" " id="ZVa-uj-vMY"/>
+                        <barButtonItem key="backBarButtonItem" title="  " id="ZVa-uj-vMY"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectioV1" destination="uy8-wz-KqU" id="bTH-vf-Mty"/>
@@ -1060,6 +1060,7 @@
     </scenes>
     <resources>
         <image name=" " width="16" height="16"/>
+        <image name="Backgroundd" width="1920" height="1080"/>
         <image name="Iconorder" width="512" height="512"/>
         <image name="Iconregister" width="512" height="512"/>
         <image name="Iconservice" width="512" height="512"/>

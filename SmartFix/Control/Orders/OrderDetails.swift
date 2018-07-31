@@ -63,6 +63,9 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        setupView()
         Tbv.isHidden = true
         Tbv2.isHidden = true
         

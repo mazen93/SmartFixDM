@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 import Firebase
-
+import Kingfisher
 class orderCenterOrder: UIViewController {
     
     
@@ -102,12 +102,16 @@ class orderCenterOrder: UIViewController {
         GoButton.layer.cornerRadius = 10
         GoButton.layer.borderWidth = 2
         GoButton.layer.borderColor = UIColor.white.cgColor
-        self.navigationItem.backBarButtonItem=UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+        
+        self.navigationItem.backBarButtonItem=UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor=UIColor.white
        
 
     }
-   
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.backBarButtonItem=UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor=UIColor.white
+    }
     
    
 
@@ -140,7 +144,7 @@ class orderCenterOrder: UIViewController {
                     let CenterName  = artistObject?["name"] as! String
                     let CenterAddress = artistObject?["address"] as! String
                     let CenterService  = artistObject?["the_service"] as! String
-                    
+                    let CenterImage  = artistObject?["image"] as! String
                     let lat  = artistObject?["lat"] as! Double
                     let lng  = artistObject?["lng"] as! Double
                     
@@ -157,6 +161,9 @@ class orderCenterOrder: UIViewController {
                     self.ServiceLabel.text = CenterService
                     self.AddressLabel.text = CenterAddress
                     self.navigationItem.title=CenterName
+                    let url = URL(string: CenterImage)
+                    self.photo.kf.setImage(with: url)
+                    
                     self.lat=lat
                     self.long=lng
                     

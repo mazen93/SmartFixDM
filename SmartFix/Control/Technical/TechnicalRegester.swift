@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class TechnicalRegester: UIViewController {
+class TechnicalRegester: UIViewController,WKNavigationDelegate {
     
     //MARK:- Outlet
     @IBOutlet weak var mywebview: WKWebView!
@@ -45,7 +45,7 @@ class TechnicalRegester: UIViewController {
         DispatchQueue.global(qos: .background).async {
             //background code
             DispatchQueue.main.async {
-                self.activityIndicatorCall()
+              //  self.activityIndicatorCall()
                 self.loadWebView()
             }
         }
@@ -54,9 +54,14 @@ class TechnicalRegester: UIViewController {
         let url = URL(string:  "http://www.smartfixsa.com/register/")
        
         mywebview.load(URLRequest(url: url!))
-        activityIndicator.stopAnimating()
+       
     }
-    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.activityIndicatorCall()
+    }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+         activityIndicator.stopAnimating()
+    }
     
     
     
