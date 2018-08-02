@@ -74,6 +74,8 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         determineMyCurrentLocation()
     }
     
+ 
+    
     @IBAction func onclickbutton(_ sender: Any) {
         if Tbv.isHidden {
             animate(toogle: true)
@@ -174,6 +176,8 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         
         btn2.setTitle("النوع", for: .normal)
         databaseRefrence=Database.database().reference().child("parts")
+        databaseRefrence?.keepSynced(true)
+       
         //  print(" id == \( CentersList.id)")
         //   databaseRefrence.queryOrderedByKey("phoneid").queryEqual(toValue: CentersList.id)
         
@@ -275,6 +279,12 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
     //loc
     
     func determineMyCurrentLocation() {
+        
+        
+        
+        
+        
+        print("determine")
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -282,7 +292,7 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
-            //locationManager.startUpdatingHeading()
+            locationManager.startUpdatingHeading()
         }
     }
     
@@ -291,8 +301,13 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         userCurrentLocation=userLocation
         
         
-       // print("user latitude = \(userLocation.coordinate.latitude)")
-       // print("user longitude = \(userLocation.coordinate.longitude)")
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+        
+        
+        
+        
+        
         
         getData2()
         
@@ -318,9 +333,11 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         
 
         
-       // print("closestLocation: \(closestLocation!), distance: \(smallestDistance!)")
+        print("closestLocation: \(closestLocation!), distance: \(smallestDistance!)")
        
         CenterLocation=closestLocation!
+        
+        
         getCenterData(loca: CenterLocation!)
         
         
@@ -332,6 +349,9 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
     
     
     func getlocation(userLocation:CLLocation)  {
+        
+        
+        
         
         let userL=CLLocation(latitude: userCurrentLocation.coordinate.latitude, longitude:  userCurrentLocation.coordinate.longitude)
         
@@ -349,6 +369,10 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
     
     func getData2() {
         
+        
+        
+        
+        print("get data 2")
         ref = Database.database().reference().child("service_centers")
         
         //observing the data changes
@@ -375,7 +399,7 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
                     let lat  = artistObject?["lat"] as! Double
                     let lng  = artistObject?["lng"] as! Double
                     
-                    let user=LatLngModel(lat:lat, lng: lng)
+                    let _=LatLngModel(lat:lat, lng: lng)
                     
                     self.locationss.append(CLLocation(latitude: lat, longitude: lng))
                     
@@ -386,6 +410,7 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
                     // print(self.locations)
                     
                 }
+              
                 self.getlocation(userLocation:self.userCurrentLocation)
                 
                 
@@ -404,8 +429,8 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
         
         let lat=loca.coordinate.latitude
         let lng=loca.coordinate.longitude
-      //  print(lat)
-       // print(lng)
+      print("laaaaaaattttttt\(lat)")
+      print(lng)
         ref = Database.database().reference().child("service_centers")
         let querey=ref?.queryOrdered(byChild: "lat").queryEqual(toValue:lat).ref.queryOrdered(byChild: "lng").queryEqual(toValue:lng)
         
@@ -423,15 +448,20 @@ class OrderDetails: UIViewController,CLLocationManagerDelegate {
                         let CenterAddress = artistObject?["address"] as! String
                         let CenterService  = artistObject?["the_service"] as! String
                         
-                        
+                    
+                    
+                    
+                    
+                    let latt  = artistObject?["lat"] as! Double
+                    let lngg  = artistObject?["lng"] as! Double
                         // create Ream Object
                         let user=CentersModel()
                         
                         user.name=CenterName
                         user.addres=CenterAddress
                         user.service=CenterService
-                        user.lat.value=lat
-                        user.lng.value=lng
+                        user.lat.value=latt
+                        user.lng.value=lngg
                     
                     
                     
@@ -490,7 +520,7 @@ extension OrderDetails:UITableViewDataSource,UITableViewDelegate {
             
             
             getDataissue(partkey: CentersList[indexPath.row])
-          //  getDataissue(CentersList[indexPath.row].id)
+          
             animate(toogle: false)
             UIView.animate(withDuration: animation) {
                 

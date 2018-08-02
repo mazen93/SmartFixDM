@@ -8,6 +8,8 @@ target 'SmartFix' do
   # Pods for SmartFix
    pod 'Firebase/Core'
    pod 'Firebase/Database'
+   pod 'Firebase/Auth'
+   pod 'ReachabilitySwift'
    pod 'RealmSwift'
    pod 'Kingfisher', '~> 4.0'
    pod 'DropDown'   

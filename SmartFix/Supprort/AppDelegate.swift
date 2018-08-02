@@ -12,7 +12,6 @@ import Firebase
 import Realm
 import RealmSwift
 
-
 var uiRealm=try! Realm()
 
 @UIApplicationMain
@@ -23,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
+       
 //        
 //        UINavigationBar.appearance().tintColor=UIColor.white
 //        UINavigationBar.appearance().barTintColor=UIColor(red: 0, green: 137, blue: 178, alpha: 0)
@@ -32,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         FirebaseApp.configure()
+        Database.database().isPersistenceEnabled=true
         return true
     }
 

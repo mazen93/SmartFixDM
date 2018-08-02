@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D23BBE6ECE57C3377A74E40E1137B57A"
+               BlueprintIdentifier = "4153B8402656559F22D841F9B5F42031"
                BuildableName = "Pods_SmartFix.framework"
                BlueprintName = "Pods-SmartFix"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D23BBE6ECE57C3377A74E40E1137B57A"
+            BlueprintIdentifier = "4153B8402656559F22D841F9B5F42031"
             BuildableName = "Pods_SmartFix.framework"
             BlueprintName = "Pods-SmartFix"
             ReferencedContainer = "container:Pods.xcodeproj">

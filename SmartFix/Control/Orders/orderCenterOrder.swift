@@ -47,16 +47,18 @@ class orderCenterOrder: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-       //   determineMyCurrentLocation()
+        
         
       
         
-
+ 
     BackgroundProcess()
         
         setUpView()
        // setData()
-        
+        getCenterData(loca: self.CenterLocation!)
+    
+    
     }
     
     
@@ -66,8 +68,8 @@ class orderCenterOrder: UIViewController {
             DispatchQueue.main.async {
              //   self.determineMyCurrentLocation()
                
-             //   self.getData2()
-                self.getCenterData(loca: self.CenterLocation!)
+              //  self.getData2()
+               // self.getCenterData(loca: self.CenterLocation!)
                 
             }
         }

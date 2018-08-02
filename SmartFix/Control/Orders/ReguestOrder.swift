@@ -177,9 +177,9 @@ class ReguestOrder: UIViewController ,UITableViewDelegate,UITableViewDataSource 
             vc?.orderKey=OrderList[indexPath.row]
             self.navigationController?.pushViewController(vc!, animated: true)
         }else{
-            
-            let vc=SFSafariViewController(url: URL(string: "http://www.smartfixsa.com/maintenance/")!)
-            self.present(vc, animated: true, completion: nil)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "NewOrderweb") as? NewOrderweb
+           
+            self.navigationController?.pushViewController(vc!, animated: true)
         }
     }
     

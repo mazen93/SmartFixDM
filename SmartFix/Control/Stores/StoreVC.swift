@@ -19,6 +19,7 @@ class StoreVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
     
       var StoreList:Results<StoreModel>!
     
+    @IBOutlet weak var updateLabel: UILabel!
     
     
     
@@ -158,7 +159,12 @@ class StoreVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSou
         return cell
     }
     
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        updateLabel.alpha=1
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.updateLabel.alpha = 0
+        }
+    }
     
 
 

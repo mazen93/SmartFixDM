@@ -24,7 +24,7 @@ class CentersVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     //var locations:CLLocation
     var ref: DatabaseReference!
     
-    
+   
     var loc=[CLLocation]()
     
     var getLatLng=[LatLngModel]()
@@ -32,7 +32,7 @@ class CentersVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       
+      
         BackgroundProcess()
         setupTableView()
     }
@@ -73,6 +73,7 @@ class CentersVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
     func getData() {
         
         ref = Database.database().reference().child("service_centers")
+         Database.database()
         
         //observing the data changes
         ref.observe(DataEventType.value, with: { (snapshot) in
